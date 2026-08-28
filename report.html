@@ -2,171 +2,409 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CivicAI | Report an Issue</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CivicAI - Report an Issue</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<header class="navbar">
+
+<nav class="navbar">
 
     <div class="logo">
-        <span class="logo-icon">⬡</span>
+        <span class="logo-icon">◉</span>
         Civic<span>AI</span>
     </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a class="active" href="report.html">Report an Issue</a>
-        <a href="dashboard.html">My Reports</a>
-        <a href="heatmap.html">Hotspots</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="#">About</a>
-    </nav>
+    <a href="index.html">Home</a>
 
-    <div class="profile">
-        🔔
-        <div class="avatar">H</div>
-        Hema R⌄
+    <a href="report.html" class="active">
+        Report an Issue
+    </a>
+
+    <a href="dashboard.html">
+        My Reports
+    </a>
+
+    <a href="heatmap.html">
+        Hotspots
+    </a>
+
+    <a href="dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="analysis.html">
+        About
+    </a>
+
+    <div class="user">
+        🔔 &nbsp; 👤 Hema R⌄
     </div>
 
-</header>
+</nav>
 
 
-<main class="page-container">
 
-    <div class="page-title">
-
-        <h1>Report a Civic Issue</h1>
-
-        <p>
-            Help improve your city by reporting public problems.
-        </p>
-
-    </div>
+<main class="container">
 
 
-    <div class="report-layout">
+<div class="page-title">
+
+    <h1>← &nbsp; Report a Civic Issue</h1>
+
+    <p>
+        Help your community by reporting issues around you
+    </p>
+
+</div>
 
 
-        <div class="form-panel">
 
-            <form onsubmit="submitReport(event)">
-
-                <label>Upload Image</label>
-
-                <div class="upload-box">
-
-                    <div class="upload-icon">☁</div>
-
-                    <h3>Click to upload or drag and drop</h3>
-
-                    <p>PNG, JPG up to 10MB</p>
-
-                    <input type="file" id="image" accept="image/*">
-
-                </div>
+<div class="grid grid-2">
 
 
-                <label>Location</label>
+<!-- REPORT FORM -->
 
-                <div class="location-row">
+<div class="card">
 
-                    <input
-                        type="text"
-                        id="location"
-                        placeholder="Enter location"
-                        required
-                    >
-
-                    <button
-                        type="button"
-                        class="location-btn"
-                        onclick="getLocation()">
-                        📍 Use My Location
-                    </button>
-
-                </div>
+    <h2>📄 Report Details</h2>
 
 
-                <label>Problem Category</label>
+    <label>
+        1. Upload Image *
+    </label>
 
-                <select id="category" required>
-
-                    <option value="">Select a category</option>
-
-                    <option>Pothole</option>
-                    <option>Garbage Overflow</option>
-                    <option>Broken Street Light</option>
-                    <option>Water Leakage</option>
-                    <option>Damaged Road</option>
-                    <option>Open Drain</option>
-                    <option>Other</option>
-
-                </select>
+    <p class="small-text">
+        Upload a clear image of the issue
+    </p>
 
 
-                <label>Description</label>
+    <div class="upload">
 
-                <textarea
-                    id="description"
-                    placeholder="Describe the issue in detail..."
-                    maxlength="500"
-                    required></textarea>
+        <div>
 
-                <small class="counter">0/500</small>
+            <div class="upload-icon">
+                ☁️
+            </div>
 
+            <label for="photo">
+                Click to upload
+            </label>
 
-                <button class="full-btn" type="submit">
-                    ➤ &nbsp; Submit Report
-                </button>
+            <p>
+                PNG, JPG, JPEG up to 10MB
+            </p>
 
-            </form>
-
-        </div>
-
-
-        <div class="tips-panel">
-
-            <h3>💡 Tips for better reports</h3>
-
-            <ul>
-
-                <li>Capture clear photos of the issue.</li>
-
-                <li>Include accurate location information.</li>
-
-                <li>Provide a short and clear description.</li>
-
-                <li>Avoid duplicate submissions.</li>
-
-            </ul>
+            <input
+                type="file"
+                id="photo"
+                accept="image/*"
+            >
 
         </div>
 
     </div>
+
+
+
+    <label>
+        2. Issue Category *
+    </label>
+
+    <select>
+
+        <option>
+            Road Damage / Pothole
+        </option>
+
+        <option>
+            Garbage Overflow
+        </option>
+
+        <option>
+            Broken Street Light
+        </option>
+
+        <option>
+            Water Leakage
+        </option>
+
+        <option>
+            Drainage Problem
+        </option>
+
+    </select>
+
+
+
+    <label>
+        3. Description *
+    </label>
+
+    <textarea
+        placeholder="Describe the issue in detail..."
+    ></textarea>
+
+
+
+    <label>
+        4. Location *
+    </label>
+
+    <input
+        type="text"
+        value="11.0168° N, 76.9558° E"
+    >
+
+    <p class="green"
+       style="margin-top:8px;font-size:13px;">
+        📍 Auto-detected location
+    </p>
+
+    <p class="small-text">
+        R.S. Puram, Coimbatore, Tamil Nadu
+    </p>
+
+
+
+    <label>
+        5. When did you notice this issue?
+    </label>
+
+    <input type="datetime-local">
+
+
+
+    <label>
+        6. How often is this a problem?
+    </label>
+
+    <select>
+
+        <option>Rarely</option>
+
+        <option>Sometimes</option>
+
+        <option selected>Often</option>
+
+        <option>Always</option>
+
+    </select>
+
+
+    <br><br>
+
+
+    <button
+        class="btn"
+        onclick="submitReport()"
+    >
+        ➤ &nbsp; Submit Report
+    </button>
+
+
+    <p class="small-text"
+       style="margin-top:15px;text-align:center;">
+        🔒 Your report is safely and securely submitted
+    </p>
+
+</div>
+
+
+
+<!-- RIGHT SIDE -->
+
+<div>
+
+
+<div class="card">
+
+    <h2>✨ AI Analysis Preview</h2>
+
+    <br>
+
+
+    <div class="analysis-row">
+
+        <b>Predicted Issue</b>
+
+        <span>Pothole</span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Severity</b>
+
+        <span class="badge badge-high">
+            High
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Safety Impact</b>
+
+        <span class="badge badge-high">
+            High
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Trust Score</b>
+
+        <span class="badge badge-low">
+            92%
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Duplicate Check</b>
+
+        <span class="badge badge-low">
+            No Similar Reports
+        </span>
+
+    </div>
+
+
+    <br>
+
+
+    <div class="info-box">
+
+        ℹ️ This is an AI prediction.
+        Final evaluation will be done by authorities.
+
+    </div>
+
+</div>
+
+
+
+<br>
+
+
+
+<div class="card">
+
+    <h2>📍 Location Preview</h2>
+
+    <br>
+
+    <div class="map">
+
+        <span class="map-label label2">
+            R.S. Puram
+        </span>
+
+        <div
+            class="map-pin"
+            style="left:48%;top:40%;"
+        >
+            📍
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<br>
+
+
+
+<div class="card">
+
+    <h2>💡 Tips for Better Reports</h2>
+
+    <br>
+
+    <p class="green">
+        ✓ &nbsp; Take clear photos of the issue
+    </p>
+
+    <br>
+
+    <p class="green">
+        ✓ &nbsp; Include accurate location
+    </p>
+
+    <br>
+
+    <p class="green">
+        ✓ &nbsp; Provide an accurate description
+    </p>
+
+    <br>
+
+    <p class="green">
+        ✓ &nbsp; Good reports are reviewed faster
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </main>
 
 
-<footer>
+
+<footer class="footer">
 
     <div class="footer-logo">
-        ⬡ CivicAI
-        <small>© 2026 CivicAI. All rights reserved.</small>
+        ◉ Civic<span>AI</span>
     </div>
 
-    <p>Building smarter communities with AI and citizens.</p>
+    <p>
+        Building smarter communities with AI and citizens.
+    </p>
 
-    <div class="footer-links">
-        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
-    </div>
+    <p>
+        © 2025 CivicAI. All rights reserved.
+    </p>
 
 </footer>
 
-<script src="js/script.js"></script>
+
+
+<script>
+
+function submitReport() {
+
+    alert(
+        "Report submitted successfully! AI analysis has started."
+    );
+
+    window.location.href = "analysis.html";
+
+}
+
+</script>
+
 
 </body>
 </html>
