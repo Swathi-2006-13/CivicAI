@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Issue - CivicAI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>🏙️ CivicAI</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Issue</a>
+            <a href="heatmap.html">Heatmap</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+</header>
+
+<div class="page">
+
+    <div class="form-container">
+
+        <h1>📢 Report a Civic Issue</h1>
+
+        <p>
+            Help improve your city by reporting a public problem.
+        </p>
+
+        <form onsubmit="submitReport(event)">
+
+            <label>Upload Image</label>
+
+            <input
+                type="file"
+                id="image"
+                accept="image/*"
+                required
+            >
+
+            <label>Location</label>
+
+            <div class="location-box">
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter location"
+                    required
+                >
+
+                <button type="button" onclick="getLocation()">
+                    📍 Use Location
+                </button>
+
+            </div>
+
+            <label>Problem Category</label>
+
+            <select id="category" required>
+
+                <option value="">Select Problem</option>
+
+                <option>Pothole</option>
+                <option>Garbage</option>
+                <option>Broken Streetlight</option>
+                <option>Water Leakage</option>
+                <option>Damaged Road</option>
+                <option>Open Drain</option>
+                <option>Other</option>
+
+            </select>
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                placeholder="Describe the problem..."
+                required
+            ></textarea>
+
+            <button class="submit-btn" type="submit">
+                🚀 Submit Report
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 CivicAI</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
