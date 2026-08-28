@@ -4,7 +4,7 @@ function submitReport(event) {
 
     alert(
         "✅ Report submitted successfully!\n\n" +
-        "AI is analyzing your report..."
+        "CivicAI is analyzing your image..."
     );
 
     window.location.href = "analysis.html";
@@ -13,40 +13,48 @@ function submitReport(event) {
 
 function getLocation() {
 
-    if (navigator.geolocation) {
+    if (!navigator.geolocation) {
 
-        navigator.geolocation.getCurrentPosition(
+        alert("Geolocation is not supported by your browser.");
 
-            function(position) {
-
-                document.getElementById("location").value =
-                    "Latitude: " +
-                    position.coords.latitude.toFixed(5) +
-                    ", Longitude: " +
-                    position.coords.longitude.toFixed(5);
-
-            },
-
-            function() {
-
-                alert("Unable to get your location.");
-
-            }
-
-        );
-
-    } else {
-
-        alert("Geolocation is not supported.");
-
+        return;
     }
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position) {
+
+            const latitude =
+                position.coords.latitude.toFixed(5);
+
+            const longitude =
+                position.coords.longitude.toFixed(5);
+
+            document.getElementById("location").value =
+                "Latitude: " +
+                latitude +
+                ", Longitude: " +
+                longitude;
+
+        },
+
+        function() {
+
+            alert(
+                "Unable to get your location. " +
+                "Please enter it manually."
+            );
+
+        }
+
+    );
 }
 
 
 function acceptResolution() {
 
     document.getElementById("message").innerHTML =
-        "✅ Thank you! The resolution has been verified by the citizen.";
+        "✅ Thank you! The resolution has been verified successfully.";
 
 }
 
@@ -55,5 +63,33 @@ function rejectResolution() {
 
     document.getElementById("message").innerHTML =
         "❌ Resolution rejected. The issue will be sent for further review.";
+
+}
+
+
+function unableToVerify() {
+
+    document.getElementById("message").innerHTML =
+        "ℹ️ Verification marked as unavailable. More evidence is required.";
+
+}
+
+
+/* Character counter */
+
+const description =
+    document.getElementById("description");
+
+if (description) {
+
+    description.addEventListener("input", function() {
+
+        const counter =
+            document.querySelector(".counter");
+
+        counter.textContent =
+            this.value.length + "/500";
+
+    });
 
 }
