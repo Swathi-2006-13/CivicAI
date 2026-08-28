@@ -4,149 +4,193 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>CivicAI | AI Analysis</title>
 
-    <title>AI Analysis - CivicAI</title>
-
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-<nav>
-
-    <h2>🏙️ CivicAI</h2>
-
-    <div class="nav-links">
-
-        <a href="index.html">Home</a>
-
-        <a href="report.html">Report Issue</a>
-
-        <a href="heatmap.html">Heatmap</a>
-
-        <a href="dashboard.html">Dashboard</a>
-
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
     </div>
 
-</nav>
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a href="heatmap.html">Hotspots</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
+
+    </nav>
+
+    <div class="profile">
+        🔔
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
 
 </header>
 
 
-<div class="page">
+<main class="page-container">
 
-    <div class="analysis-container">
+    <div class="page-title">
 
-        <h1>🤖 AI Analysis</h1>
+        <h1>AI Analysis Results</h1>
 
         <p>
-            CivicAI has analyzed your reported issue.
+            Our AI has analyzed your reported issue.
         </p>
-
-
-        <div class="analysis-grid">
-
-
-            <div class="analysis-card">
-
-                <div class="analysis-icon">🔍</div>
-
-                <h3>Issue Detected</h3>
-
-                <h2>Pothole</h2>
-
-                <p>AI Confidence: <b>96%</b></p>
-
-            </div>
-
-
-            <div class="analysis-card">
-
-                <div class="analysis-icon">⚠️</div>
-
-                <h3>Severity</h3>
-
-                <h2 class="high">HIGH</h2>
-
-                <p>Requires quick attention</p>
-
-            </div>
-
-
-            <div class="analysis-card">
-
-                <div class="analysis-icon">🚨</div>
-
-                <h3>Safety Risk</h3>
-
-                <h2 class="high">HIGH</h2>
-
-                <p>Potential accident risk</p>
-
-            </div>
-
-
-            <div class="analysis-card">
-
-                <div class="analysis-icon">🛡️</div>
-
-                <h3>Trust Score</h3>
-
-                <h2>92%</h2>
-
-                <p>Report appears trustworthy</p>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="duplicate-card">
-
-            <h2>🔄 Duplicate Report Detection</h2>
-
-            <p>
-                AI found <b>3 similar reports</b> near this location.
-            </p>
-
-            <span class="status">Possible Duplicate</span>
-
-        </div>
-
-
-        <div class="status-card">
-
-            <h2>📋 Report Status</h2>
-
-            <p>
-                Your report has been forwarded to the
-                concerned authority.
-            </p>
-
-            <span class="pending">PENDING</span>
-
-        </div>
-
-
-        <a href="dashboard.html">
-
-            <button>
-                View Authority Dashboard →
-            </button>
-
-        </a>
 
     </div>
 
-</div>
+
+    <div class="analysis-grid">
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon blue-bg">▣</span>
+
+            <div>
+                <small>Issue Detected</small>
+                <h2>Pothole</h2>
+                <p>AI Confidence: <b>96%</b></p>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon red-bg">!</span>
+
+            <div>
+                <small>Severity</small>
+                <h2>High</h2>
+                <p>Requires quick attention</p>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon orange-bg">⚠</span>
+
+            <div>
+                <small>Safety Impact</small>
+                <h2>High</h2>
+                <p>Potential accident risk</p>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon green-bg">✓</span>
+
+            <div>
+                <small>Trust Score</small>
+                <h2>92%</h2>
+                <p>Report appears trustworthy</p>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon blue-bg">⧉</span>
+
+            <div>
+                <small>Duplicate Reports</small>
+                <h2>3</h2>
+                <p>Similar reports found nearby</p>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <span class="card-icon blue-bg">●</span>
+
+            <div>
+                <small>Status</small>
+                <h2>Pending</h2>
+                <p>Awaiting authority action</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="two-column">
+
+
+        <div class="info-panel">
+
+            <h2>🔄 Duplicate Detection</h2>
+
+            <p>
+                AI found <b>3 similar reports</b> near this location.
+                This helps avoid duplicate submissions and allows
+                authorities to prioritize real issues.
+            </p>
+
+            <span class="duplicate-badge">
+                ● Possible Duplicate
+            </span>
+
+        </div>
+
+
+        <div class="info-panel">
+
+            <h2>What happens next?</h2>
+
+            <p>
+                Your report has been forwarded to the concerned
+                authority. You will be notified once there is an update.
+            </p>
+
+            <a href="dashboard.html" class="btn primary">
+                View Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
+    </div>
+
+</footer>
 
 </body>
 </html>
