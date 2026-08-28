@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Verify Resolution - CivicAI</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<h2>🏙️ CivicAI</h2>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="report.html">Report Issue</a>
+
+<a href="heatmap.html">Heatmap</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<div class="page">
+
+<div class="verification">
+
+<h1>✅ Resolution Verification</h1>
+
+<p>
+The authority has marked this issue as resolved.
+</p>
+
+
+<div class="repair-box">
+
+<div>
+
+<h3>Before Repair</h3>
+
+<div class="image-placeholder">
+🕳️
+<br>
+Pothole
+</div>
+
+</div>
+
+
+<div>
+
+<h3>After Repair</h3>
+
+<div class="image-placeholder repaired">
+🛣️
+<br>
+Repaired Road
+</div>
+
+</div>
+
+</div>
+
+
+<div class="ai-verification">
+
+<h2>🤖 AI Repair Analysis</h2>
+
+<p>
+AI analyzed the repair evidence and detected
+that the reported pothole appears to have been repaired.
+</p>
+
+<h3>Repair Confidence: <b>94%</b></h3>
+
+</div>
+
+
+<h2>Did the repair actually happen?</h2>
+
+
+<div class="verify-buttons">
+
+<button onclick="acceptResolution()">
+
+✅ Yes, Issue Resolved
+
+</button>
+
+
+<button
+class="reject"
+onclick="rejectResolution()">
+
+❌ No, Still Exists
+
+</button>
+
+</div>
+
+
+<div id="message"></div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
