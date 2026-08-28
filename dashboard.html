@@ -3,179 +3,324 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Authority Dashboard - CivicAI</title>
+    <title>CivicAI | Dashboard</title>
 
-<link rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-<nav>
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
+    </div>
 
-<h2>🏙️ CivicAI</h2>
+    <nav>
 
-<div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a href="heatmap.html">Hotspots</a>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
 
-<a href="index.html">Home</a>
+    </nav>
 
-<a href="report.html">Report Issue</a>
-
-<a href="heatmap.html">Heatmap</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-</div>
-
-</nav>
+    <div class="profile">
+        🔔
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
 
 </header>
 
 
-<div class="page">
+<main class="page-container">
 
-<h1>📊 Authority Dashboard</h1>
+    <div class="page-title">
 
-<p>Monitor and prioritize civic issues.</p>
+        <h1>Authority Dashboard</h1>
 
+        <p>
+            Monitor, manage and prioritize civic issues.
+        </p>
 
-<div class="dashboard-cards">
+    </div>
 
 
-<div class="stat-card">
+    <section class="stats dashboard-stats">
 
-<h2>120</h2>
+        <div class="stat-card">
 
-<p>Total Reports</p>
+            <div class="stat-icon blue-icon">▣</div>
 
-</div>
+            <div>
+                <small>Total Reports</small>
+                <h2>1,248</h2>
+                <p class="growth">↑ 18% this month</p>
+            </div>
 
+        </div>
 
-<div class="stat-card">
 
-<h2>35</h2>
+        <div class="stat-card">
 
-<p>Pending Issues</p>
+            <div class="stat-icon blue-icon">▣</div>
 
-</div>
+            <div>
+                <small>Pending Issues</small>
+                <h2>350</h2>
+                <p class="growth">↑ 12% this month</p>
+            </div>
 
+        </div>
 
-<div class="stat-card">
 
-<h2>15</h2>
+        <div class="stat-card">
 
-<p>High Priority</p>
+            <div class="stat-icon red-icon">!</div>
 
-</div>
+            <div>
+                <small>High Priority</small>
+                <h2>142</h2>
+                <p class="growth">↑ 8% this month</p>
+            </div>
 
+        </div>
 
-<div class="stat-card">
 
-<h2>70</h2>
+        <div class="stat-card">
 
-<p>Resolved</p>
+            <div class="stat-icon green-icon">✓</div>
 
-</div>
+            <div>
+                <small>Resolved</small>
+                <h2>986</h2>
+                <p class="growth">↑ 22% this month</p>
+            </div>
 
+        </div>
 
-</div>
+    </section>
 
 
-<div class="table-container">
+    <div class="table-panel">
 
-<h2>📋 Recent Reports</h2>
+        <div class="panel-header">
 
+            <div>
 
-<table>
+                <h2>Recent Reports</h2>
 
-<tr>
+                <p>
+                    Manage reported civic issues.
+                </p>
 
-<th>Issue</th>
+            </div>
 
-<th>Location</th>
+            <a href="#">View All</a>
 
-<th>Severity</th>
+        </div>
 
-<th>Status</th>
 
-</tr>
+        <table>
 
+            <thead>
 
-<tr>
+                <tr>
+                    <th>Issue</th>
+                    <th>Location</th>
+                    <th>Severity</th>
+                    <th>Status</th>
+                    <th>Reported On</th>
+                    <th>Action</th>
+                </tr>
 
-<td>🕳️ Pothole</td>
+            </thead>
 
-<td>Coimbatore</td>
+            <tbody>
 
-<td class="high">High</td>
+                <tr>
 
-<td><span class="pending">Pending</span></td>
+                    <td>🕳️ Huge pothole</td>
+                    <td>R.S. Puram</td>
 
-</tr>
+                    <td>
+                        <span class="badge high">High</span>
+                    </td>
 
+                    <td>
+                        <span class="status review">
+                            Under Review
+                        </span>
+                    </td>
 
-<tr>
+                    <td>Today, 10:30 AM</td>
 
-<td>🗑️ Garbage</td>
+                    <td>👁</td>
 
-<td>Gandhipuram</td>
+                </tr>
 
-<td>Medium</td>
 
-<td><span class="pending">Pending</span></td>
+                <tr>
 
-</tr>
+                    <td>🗑️ Garbage overflow</td>
+                    <td>Peelamedu</td>
 
+                    <td>
+                        <span class="badge medium">
+                            Medium
+                        </span>
+                    </td>
 
-<tr>
+                    <td>
+                        <span class="status assigned">
+                            Assigned
+                        </span>
+                    </td>
 
-<td>💡 Streetlight</td>
+                    <td>Today, 09:15 AM</td>
 
-<td>RS Puram</td>
+                    <td>👁</td>
 
-<td>Low</td>
+                </tr>
 
-<td><span class="resolved">Resolved</span></td>
 
-</tr>
+                <tr>
 
+                    <td>💡 Broken street light</td>
+                    <td>Saibaba Colony</td>
 
-<tr>
+                    <td>
+                        <span class="badge medium">
+                            Medium
+                        </span>
+                    </td>
 
-<td>🚰 Water Leakage</td>
+                    <td>
+                        <span class="status progress">
+                            In Progress
+                        </span>
+                    </td>
 
-<td>Saibaba Colony</td>
+                    <td>Yesterday</td>
 
-<td class="high">High</td>
+                    <td>👁</td>
 
-<td><span class="pending">Pending</span></td>
+                </tr>
 
-</tr>
 
+                <tr>
 
-</table>
+                    <td>🚰 Water leakage</td>
+                    <td>Tatabad</td>
 
-</div>
+                    <td>
+                        <span class="badge low">
+                            Low
+                        </span>
+                    </td>
 
+                    <td>
+                        <span class="status resolved">
+                            Resolved
+                        </span>
+                    </td>
 
-<a href="verify.html">
+                    <td>Yesterday</td>
 
-<button>
-Verify Resolutions →
-</button>
+                    <td>👁</td>
 
-</a>
+                </tr>
 
 
-</div>
+                <tr>
+
+                    <td>🚧 Open drain</td>
+                    <td>Kuniyamuthur</td>
+
+                    <td>
+                        <span class="badge high">
+                            High
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="status assigned">
+                            Assigned
+                        </span>
+                    </td>
+
+                    <td>Yesterday</td>
+
+                    <td>👁</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div>
+
+            <a href="dashboard.html">
+                📋 View All Reports
+            </a>
+
+            <a href="#">
+                👤 Assign to Worker
+            </a>
+
+            <a href="#">
+                ▣ Generate Report
+            </a>
+
+            <a href="heatmap.html">
+                📍 View Hotspots
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <a href="verify.html"
+       class="btn primary verify-link">
+       Go to Resolution Verification →
+    </a>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
+    </div>
+
+</footer>
 
 </body>
 </html>
