@@ -3,127 +3,227 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Verify Resolution - CivicAI</title>
+    <title>CivicAI | Resolution Verification</title>
 
-<link rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet"
+          href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-<nav>
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
+    </div>
 
-<h2>🏙️ CivicAI</h2>
+    <nav>
 
-<div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a href="heatmap.html">Hotspots</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="verify.html">About</a>
 
-<a href="index.html">Home</a>
+    </nav>
 
-<a href="report.html">Report Issue</a>
-
-<a href="heatmap.html">Heatmap</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-</div>
-
-</nav>
+    <div class="profile">
+        🔔
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
 
 </header>
 
 
-<div class="page">
+<main class="page-container">
 
-<div class="verification">
+    <div class="page-title">
 
-<h1>✅ Resolution Verification</h1>
+        <h1>Resolution Verification</h1>
 
-<p>
-The authority has marked this issue as resolved.
-</p>
+        <p>
+            Review the resolution and help ensure the issue is fixed.
+        </p>
 
-
-<div class="repair-box">
-
-<div>
-
-<h3>Before Repair</h3>
-
-<div class="image-placeholder">
-🕳️
-<br>
-Pothole
-</div>
-
-</div>
+    </div>
 
 
-<div>
-
-<h3>After Repair</h3>
-
-<div class="image-placeholder repaired">
-🛣️
-<br>
-Repaired Road
-</div>
-
-</div>
-
-</div>
+    <div class="verification-panel">
 
 
-<div class="ai-verification">
+        <div class="issue-details">
 
-<h2>🤖 AI Repair Analysis</h2>
+            <h3>Issue Details</h3>
 
-<p>
-AI analyzed the repair evidence and detected
-that the reported pothole appears to have been repaired.
-</p>
+            <p>
+                <b>Issue</b>
+                <br>
+                Pothole on 5th Street
+            </p>
 
-<h3>Repair Confidence: <b>94%</b></h3>
+            <p>
+                <b>Location</b>
+                <br>
+                R.S. Puram, Coimbatore
+            </p>
 
-</div>
+            <p>
+                <b>Reported On</b>
+                <br>
+                Today, 10:30 AM
+            </p>
 
+            <p>
+                <b>Reported By</b>
+                <br>
+                Hema R
+            </p>
 
-<h2>Did the repair actually happen?</h2>
-
-
-<div class="verify-buttons">
-
-<button onclick="acceptResolution()">
-
-✅ Yes, Issue Resolved
-
-</button>
-
-
-<button
-class="reject"
-onclick="rejectResolution()">
-
-❌ No, Still Exists
-
-</button>
-
-</div>
+        </div>
 
 
-<div id="message"></div>
+        <div class="repair-image">
+
+            <h3>Before Repair</h3>
+
+            <div class="road-image">
+                🕳️
+                <small>Reported Pothole</small>
+            </div>
+
+        </div>
 
 
-</div>
+        <div class="arrow">
+            →
+        </div>
 
-</div>
+
+        <div class="repair-image">
+
+            <h3>After Repair (Authority)</h3>
+
+            <div class="road-image repaired-road">
+                🛣️
+                <small>Repair Evidence</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="verification-ai">
+
+        <div>
+
+            <h2>🤖 AI Verification</h2>
+
+            <p>
+                Our AI analyzed the after-repair image and detected
+                that the reported issue appears to be fixed.
+            </p>
+
+        </div>
+
+
+        <div class="confidence">
+
+            <small>Repair Confidence</small>
+
+            <h1>94%</h1>
+
+            <div class="progress-bar">
+                <div></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="question-panel">
+
+        <h2>Did the issue get resolved?</h2>
+
+        <div class="verify-options">
+
+            <button
+                class="verify-option yes"
+                onclick="acceptResolution()">
+
+                <span>✓</span>
+
+                <div>
+                    <b>Yes, Resolved</b>
+                    <small>Issue is fixed</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="verify-option no"
+                onclick="rejectResolution()">
+
+                <span>✕</span>
+
+                <div>
+                    <b>No, Still Exists</b>
+                    <small>Issue is not fixed</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="verify-option unsure"
+                onclick="unableToVerify()">
+
+                <span>ⓘ</span>
+
+                <div>
+                    <b>Unable to Verify</b>
+                    <small>Need more details</small>
+                </div>
+
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
