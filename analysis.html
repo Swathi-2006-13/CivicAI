@@ -4,193 +4,361 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CivicAI | AI Analysis</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>CivicAI - AI Analysis</title>
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<header class="navbar">
+
+<nav class="navbar">
 
     <div class="logo">
-        <span class="logo-icon">⬡</span>
+        <span class="logo-icon">◉</span>
         Civic<span>AI</span>
     </div>
 
-    <nav>
+    <a href="index.html">Home</a>
 
-        <a href="index.html">Home</a>
-        <a href="report.html">Report an Issue</a>
-        <a href="dashboard.html">My Reports</a>
-        <a href="heatmap.html">Hotspots</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="#">About</a>
+    <a href="report.html">
+        Report an Issue
+    </a>
 
-    </nav>
+    <a href="dashboard.html">
+        My Reports
+    </a>
 
-    <div class="profile">
-        🔔
-        <div class="avatar">H</div>
-        Hema R⌄
+    <a href="heatmap.html">
+        Hotspots
+    </a>
+
+    <a href="dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="analysis.html" class="active">
+        About
+    </a>
+
+    <div class="user">
+        🔔 &nbsp; 👤 Hema R⌄
     </div>
 
-</header>
+</nav>
 
 
-<main class="page-container">
 
-    <div class="page-title">
-
-        <h1>AI Analysis Results</h1>
-
-        <p>
-            Our AI has analyzed your reported issue.
-        </p>
-
-    </div>
+<main class="container">
 
 
-    <div class="analysis-grid">
+<div class="page-title">
+
+    <h1>✨ AI Issue Analysis</h1>
+
+    <p>
+        AI-powered evaluation of the submitted civic report
+    </p>
+
+</div>
 
 
-        <div class="analysis-card">
 
-            <span class="card-icon blue-bg">▣</span>
-
-            <div>
-                <small>Issue Detected</small>
-                <h2>Pothole</h2>
-                <p>AI Confidence: <b>96%</b></p>
-            </div>
-
-        </div>
+<div class="grid grid-2">
 
 
-        <div class="analysis-card">
+<!-- ISSUE -->
 
-            <span class="card-icon red-bg">!</span>
+<div class="card">
 
-            <div>
-                <small>Severity</small>
-                <h2>High</h2>
-                <p>Requires quick attention</p>
-            </div>
+    <h2>Reported Issue</h2>
 
-        </div>
+    <br>
 
+    <div class="map">
 
-        <div class="analysis-card">
+        <span class="map-label label2">
+            R.S. Puram
+        </span>
 
-            <span class="card-icon orange-bg">⚠</span>
-
-            <div>
-                <small>Safety Impact</small>
-                <h2>High</h2>
-                <p>Potential accident risk</p>
-            </div>
-
-        </div>
-
-
-        <div class="analysis-card">
-
-            <span class="card-icon green-bg">✓</span>
-
-            <div>
-                <small>Trust Score</small>
-                <h2>92%</h2>
-                <p>Report appears trustworthy</p>
-            </div>
-
-        </div>
-
-
-        <div class="analysis-card">
-
-            <span class="card-icon blue-bg">⧉</span>
-
-            <div>
-                <small>Duplicate Reports</small>
-                <h2>3</h2>
-                <p>Similar reports found nearby</p>
-            </div>
-
-        </div>
-
-
-        <div class="analysis-card">
-
-            <span class="card-icon blue-bg">●</span>
-
-            <div>
-                <small>Status</small>
-                <h2>Pending</h2>
-                <p>Awaiting authority action</p>
-            </div>
-
+        <div
+            class="map-pin"
+            style="left:47%;top:42%;"
+        >
+            📍
         </div>
 
     </div>
 
+    <br>
 
-    <div class="two-column">
+    <h2>Large Road Pothole</h2>
 
+    <p class="small-text">
+        R.S. Puram, Coimbatore
+    </p>
 
-        <div class="info-panel">
+    <br>
 
-            <h2>🔄 Duplicate Detection</h2>
+    <span class="badge badge-high">
+        High Severity
+    </span>
 
-            <p>
-                AI found <b>3 similar reports</b> near this location.
-                This helps avoid duplicate submissions and allows
-                authorities to prioritize real issues.
-            </p>
-
-            <span class="duplicate-badge">
-                ● Possible Duplicate
-            </span>
-
-        </div>
+</div>
 
 
-        <div class="info-panel">
 
-            <h2>What happens next?</h2>
+<!-- AI RESULT -->
 
-            <p>
-                Your report has been forwarded to the concerned
-                authority. You will be notified once there is an update.
-            </p>
+<div class="card">
 
-            <a href="dashboard.html" class="btn primary">
-                View Dashboard
-            </a>
+    <h2>AI Analysis Result</h2>
 
+    <br>
+
+
+    <div class="analysis-row">
+
+        <b>Issue Type</b>
+
+        <span>
+            Road Pothole
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Severity</b>
+
+        <span class="badge badge-high">
+            High
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Safety Impact</b>
+
+        <span class="badge badge-high">
+            High
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Trust Score</b>
+
+        <span class="badge badge-low">
+            92%
+        </span>
+
+    </div>
+
+
+    <div class="analysis-row">
+
+        <b>Duplicate Report</b>
+
+        <span class="badge badge-low">
+            No
+        </span>
+
+    </div>
+
+
+    <br>
+
+
+    <h3>
+        Priority Score
+    </h3>
+
+    <div class="progress">
+
+        <div
+            class="progress-bar"
+            style="width:90%;">
         </div>
 
     </div>
+
+    <p class="small-text"
+       style="margin-top:8px;">
+        90 / 100 — Critical Priority
+    </p>
+
+
+    <br>
+
+
+    <button
+        class="btn"
+        onclick="runAI()"
+    >
+        ✨ Run AI Analysis
+    </button>
+
+</div>
+
+</div>
+
+
+
+<br>
+
+
+
+<!-- EXPLANATION -->
+
+<div class="card">
+
+    <h2>🤖 AI Explanation</h2>
+
+    <br>
+
+    <p
+        style="line-height:1.8;color:#596579;"
+    >
+
+        The AI detected a road pothole from the
+        uploaded image. Based on the size, location
+        and possible vehicle safety impact, the issue
+        has been classified as high severity.
+
+        The report has a high trust score and no
+        duplicate reports were identified nearby.
+
+    </p>
+
+</div>
+
+
+
+<br>
+
+
+
+<!-- AI PROCESS -->
+
+<div class="card">
+
+    <h2>How AI Evaluates the Report</h2>
+
+    <br>
+
+    <div class="grid grid-3">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div>
+
+                <h3>Image Detection</h3>
+
+                <p>
+                    AI identifies the civic issue
+                    from the uploaded image.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div>
+
+                <h3>Risk Evaluation</h3>
+
+                <p>
+                    AI evaluates severity and
+                    potential safety impact.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div>
+
+                <h3>Duplicate Detection</h3>
+
+                <p>
+                    Similar nearby reports are
+                    identified to avoid duplicates.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
 
 </main>
 
 
-<footer>
+
+<footer class="footer">
 
     <div class="footer-logo">
-        ⬡ CivicAI
-        <small>© 2026 CivicAI. All rights reserved.</small>
+        ◉ Civic<span>AI</span>
     </div>
 
-    <p>Building smarter communities with AI and citizens.</p>
+    <p>
+        Building smarter communities with AI and citizens.
+    </p>
 
-    <div class="footer-links">
-        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
-    </div>
+    <p>
+        © 2025 CivicAI. All rights reserved.
+    </p>
 
 </footer>
+
+
+
+<script>
+
+function runAI() {
+
+    alert(
+        "AI analysis completed successfully!"
+    );
+
+}
+
+</script>
+
 
 </body>
 </html>
