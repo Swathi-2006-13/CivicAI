@@ -3,129 +3,211 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>CivicAI | Hotspots</title>
 
-<title>Risk Heatmap - CivicAI</title>
-
-<link rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-<nav>
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
+    </div>
 
-<h2>🏙️ CivicAI</h2>
+    <nav>
 
-<div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a class="active" href="heatmap.html">Hotspots</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
 
-<a href="index.html">Home</a>
+    </nav>
 
-<a href="report.html">Report Issue</a>
-
-<a href="heatmap.html">Heatmap</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-</div>
-
-</nav>
+    <div class="profile">
+        🔔
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
 
 </header>
 
 
-<div class="page">
+<main class="page-container">
 
-<h1>🗺️ Civic Risk Heatmap</h1>
+    <div class="page-title">
 
-<p>
-Areas are displayed based on the number and severity
-of reported civic issues.
-</p>
+        <h1>Risk-Based Hotspots</h1>
 
+        <p>
+            Areas with higher number of issues and severity.
+        </p>
 
-<div class="map">
-
-<div class="map-title">
-Civic Issue Risk Map
-</div>
+    </div>
 
 
-<div class="hotspot red hotspot1">
-
-🔴
-
-<b>High Risk</b>
-
-<br>
-
-Potholes: 18
-
-</div>
+    <div class="hotspot-layout">
 
 
-<div class="hotspot orange hotspot2">
+        <div class="large-map">
 
-🟠
+            <div class="map-controls">
 
-<b>Medium Risk</b>
+                <select>
+                    <option>All Issues</option>
+                    <option>Potholes</option>
+                    <option>Garbage</option>
+                </select>
 
-<br>
+                <select>
+                    <option>All Severity</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
 
-Garbage: 11
+                <button onclick="alert('Map refreshed!')">
+                    Refresh ↻
+                </button>
 
-</div>
-
-
-<div class="hotspot green hotspot3">
-
-🟢
-
-<b>Low Risk</b>
-
-<br>
-
-Streetlights: 5
-
-</div>
+            </div>
 
 
-<div class="hotspot red hotspot4">
+            <div class="map-area">
 
-🔴
+                <span class="big-city">Coimbatore</span>
 
-<b>High Risk</b>
+                <span class="map-label ml1">Gandhipuram</span>
+                <span class="map-label ml2">R.S. Puram</span>
+                <span class="map-label ml3">Tatabad</span>
+                <span class="map-label ml4">Saibaba Colony</span>
+                <span class="map-label ml5">Peelamedu</span>
+                <span class="map-label ml6">Ukkadam</span>
 
-<br>
+                <span class="heat-map hm1"></span>
+                <span class="heat-map hm2"></span>
+                <span class="heat-map hm3"></span>
+                <span class="heat-map hm4"></span>
+                <span class="heat-map hm5"></span>
+                <span class="heat-map hm6"></span>
 
-Road Damage: 14
+                <div class="zoom">
+                    +<br><hr>−
+                </div>
 
-</div>
+            </div>
 
-
-</div>
-
-
-<div class="legend">
-
-<h3>Risk Level</h3>
-
-<p>🔴 High Risk</p>
-
-<p>🟠 Medium Risk</p>
-
-<p>🟢 Low Risk</p>
-
-</div>
+        </div>
 
 
-</div>
+        <aside>
+
+
+            <div class="side-panel">
+
+                <h3>Risk Levels</h3>
+
+                <div class="risk">
+
+                    <span class="dot red-dot"></span>
+
+                    <div>
+                        <b>High Risk</b>
+                        <small>70 - 100</small>
+                        <p>Severe issues, immediate action</p>
+                    </div>
+
+                </div>
+
+
+                <div class="risk">
+
+                    <span class="dot orange-dot"></span>
+
+                    <div>
+                        <b>Medium Risk</b>
+                        <small>40 - 69</small>
+                        <p>Moderate issues, monitor closely</p>
+                    </div>
+
+                </div>
+
+
+                <div class="risk">
+
+                    <span class="dot green-dot"></span>
+
+                    <div>
+                        <b>Low Risk</b>
+                        <small>0 - 39</small>
+                        <p>Minor issues, regular monitoring</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="side-panel">
+
+                <h3>Top Hotspots</h3>
+
+                <div class="top-location">
+                    R.S. Puram
+                    <span class="badge high">High</span>
+                </div>
+
+                <div class="top-location">
+                    Peelamedu
+                    <span class="badge high">High</span>
+                </div>
+
+                <div class="top-location">
+                    Gandhipuram
+                    <span class="badge medium">Medium</span>
+                </div>
+
+                <div class="top-location">
+                    Saibaba Colony
+                    <span class="badge medium">Medium</span>
+                </div>
+
+                <div class="top-location">
+                    Tatabad
+                    <span class="badge low">Low</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
+    </div>
+
+</footer>
 
 </body>
 </html>
