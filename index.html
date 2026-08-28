@@ -3,47 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CivicAI - Home</title>
+    <title>CivicAI | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>🏙️ CivicAI</h2>
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
+    </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="report.html">Report Issue</a>
-            <a href="heatmap.html">Heatmap</a>
-            <a href="dashboard.html">Dashboard</a>
-        </div>
+    <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a href="heatmap.html">Hotspots</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
     </nav>
+
+    <div class="profile">
+        🔔 <span class="notification">3</span>
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
 </header>
+
+
+<main>
 
 <section class="hero">
 
-    <div class="hero-content">
-        <span class="badge">AI-Powered Civic Intelligence</span>
+    <div class="hero-text">
 
         <h1>
-            Report Problems.<br>
-            <span>Build Better Cities.</span>
+            AI-Powered Civic Intelligence<br>
+            for <span>Smarter Communities</span>
         </h1>
 
         <p>
-            CivicAI helps citizens report public problems using
-            geo-tagged images and Artificial Intelligence.
+            Report issues. AI analyzes, prioritizes and helps authorities
+            act faster. Together, we build better cities.
         </p>
 
         <div class="hero-buttons">
-            <a href="report.html">
-                <button>📷 Report an Issue</button>
+
+            <a href="report.html" class="btn primary">
+                ● &nbsp; Report an Issue
             </a>
 
-            <a href="heatmap.html">
-                <button class="secondary">🗺️ View Hotspots</button>
+            <a href="heatmap.html" class="btn secondary">
+                ◉ &nbsp; View Hotspots
             </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="phone">
+
+            <div class="phone-image">
+                🛣️
+            </div>
+
+            <div class="phone-analysis">
+
+                <strong>AI Analysis</strong>
+
+                <div>
+                    Safety Impact
+                    <b class="red-text">High</b>
+                </div>
+
+                <div>
+                    Trust Score
+                    <b class="green-text">92%</b>
+                </div>
+
+                <div>
+                    Duplicate
+                    <b class="green-text">No</b>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ai-chip">AI</div>
+
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div class="stat-card">
+        <div class="stat-icon blue-icon">▣</div>
+        <div>
+            <small>Total Reports</small>
+            <h2>1,248</h2>
+            <p class="growth">↑ 18% this month</p>
         </div>
     </div>
+
+    <div class="stat-card">
+        <div class="stat-icon red-icon">!</div>
+        <div>
+            <small>High Priority</small>
+            <h2>142</h2>
+            <p class="growth">↑ 12% this month</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon yellow-icon">✓</div>
+        <div>
+            <small>Resolved</small>
+            <h2>986</h2>
+            <p class="growth">↑ 22% this month</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon green-icon">◈</div>
+        <div>
+            <small>Trust Score (Avg)</small>
+            <h2>92%</h2>
+            <p class="growth">↑ 5% this month</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="dashboard-grid">
+
+    <div class="panel hotspot-panel">
+
+        <div class="panel-header">
+            <div>
+                <h2>Risk-Based Hotspots</h2>
+                <p>Areas with higher number of issues and severity.</p>
+            </div>
+
+            <select>
+                <option>All Issues</option>
+                <option>Potholes</option>
+                <option>Garbage</option>
+                <option>Streetlights</option>
+            </select>
+        </div>
+
+        <div class="fake-map">
+
+            <span class="map-city">Coimbatore</span>
+
+            <span class="place place1">R.S. Puram</span>
+            <span class="place place2">Gandhipuram</span>
+            <span class="place place3">Saibaba Colony</span>
+
+            <span class="heat h1"></span>
+            <span class="heat h2"></span>
+            <span class="heat h3"></span>
+            <span class="heat h4"></span>
+            <span class="heat h5"></span>
+
+        </div>
+
+        <div class="map-scale">
+            Low Risk
+            <span>● ● ● ● ●</span>
+            High Risk
+        </div>
+
+    </div>
+
+
+    <div class="panel reports-panel">
+
+        <div class="panel-header">
+            <div>
+                <h2>Recent Reports</h2>
+                <p>Latest civic issues reported by citizens.</p>
+            </div>
+
+            <a href="dashboard.html">View All</a>
+        </div>
+
+
+        <div class="report-item">
+
+            <div class="report-img">🕳️</div>
+
+            <div class="report-info">
+                <strong>Huge pothole on 5th Street</strong>
+                <span>R.S. Puram, Coimbatore</span>
+                <small>Today, 10:30 AM</small>
+            </div>
+
+            <div>
+                <span class="badge high">High</span>
+                <small>Under Review</small>
+            </div>
+
+        </div>
+
+
+        <div class="report-item">
+
+            <div class="report-img">🗑️</div>
+
+            <div class="report-info">
+                <strong>Garbage overflow</strong>
+                <span>Peelamedu, Coimbatore</span>
+                <small>Today, 09:15 AM</small>
+            </div>
+
+            <div>
+                <span class="badge medium">Medium</span>
+                <small>Assigned</small>
+            </div>
+
+        </div>
+
+
+        <div class="report-item">
+
+            <div class="report-img">💡</div>
+
+            <div class="report-info">
+                <strong>Broken street light</strong>
+                <span>Saibaba Colony</span>
+                <small>Yesterday, 08:45 PM</small>
+            </div>
+
+            <div>
+                <span class="badge medium">Medium</span>
+                <small>In Progress</small>
+            </div>
+
+        </div>
+
+
+        <div class="report-item">
+
+            <div class="report-img">🚰</div>
+
+            <div class="report-info">
+                <strong>Water leakage</strong>
+                <span>Ukkadam, Coimbatore</span>
+                <small>Yesterday, 05:20 PM</small>
+            </div>
+
+            <div>
+                <span class="badge low">Low</span>
+                <small>Resolved</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel works-panel">
+
+        <h2>How CivicAI Works</h2>
+
+        <div class="work">
+            <span>▣</span>
+            <div>
+                <b>1. Report</b>
+                <p>Citizens report issues with photos & location.</p>
+            </div>
+        </div>
+
+        <div class="work">
+            <span>◎</span>
+            <div>
+                <b>2. AI Analysis</b>
+                <p>AI evaluates severity, safety impact & trustworthiness.</p>
+            </div>
+        </div>
+
+        <div class="work">
+            <span>⚑</span>
+            <div>
+                <b>3. Prioritize</b>
+                <p>Issues are prioritized and sent to authorities.</p>
+            </div>
+        </div>
+
+        <div class="work">
+            <span>✓</span>
+            <div>
+                <b>4. Resolve & Verify</b>
+                <p>Citizens verify the repair with AI-analyzed evidence.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="panel insights-panel">
+
+        <h2>AI Insights</h2>
+
+        <div class="mini-chart">
+            <div></div>
+        </div>
+
+        <p>
+            High severity issues increased by <b>18%</b>
+            in the last 7 days. Most reported in
+            R.S. Puram and Peelamedu.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp;
+        Terms of Service &nbsp;&nbsp;
+        Contact Us
+    </div>
+
+</footer>
+
+</body>
+</html>
