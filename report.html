@@ -1,103 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Report Issue - CivicAI</title>
-
+    <title>CivicAI | Report an Issue</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>🏙️ CivicAI</h2>
+<header class="navbar">
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="report.html">Report Issue</a>
-            <a href="heatmap.html">Heatmap</a>
-            <a href="dashboard.html">Dashboard</a>
-        </div>
+    <div class="logo">
+        <span class="logo-icon">⬡</span>
+        Civic<span>AI</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="report.html">Report an Issue</a>
+        <a href="dashboard.html">My Reports</a>
+        <a href="heatmap.html">Hotspots</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
     </nav>
+
+    <div class="profile">
+        🔔
+        <div class="avatar">H</div>
+        Hema R⌄
+    </div>
+
 </header>
 
-<div class="page">
 
-    <div class="form-container">
+<main class="page-container">
 
-        <h1>📢 Report a Civic Issue</h1>
+    <div class="page-title">
+
+        <h1>Report a Civic Issue</h1>
 
         <p>
-            Help improve your city by reporting a public problem.
+            Help improve your city by reporting public problems.
         </p>
-
-        <form onsubmit="submitReport(event)">
-
-            <label>Upload Image</label>
-
-            <input
-                type="file"
-                id="image"
-                accept="image/*"
-                required
-            >
-
-            <label>Location</label>
-
-            <div class="location-box">
-
-                <input
-                    type="text"
-                    id="location"
-                    placeholder="Enter location"
-                    required
-                >
-
-                <button type="button" onclick="getLocation()">
-                    📍 Use Location
-                </button>
-
-            </div>
-
-            <label>Problem Category</label>
-
-            <select id="category" required>
-
-                <option value="">Select Problem</option>
-
-                <option>Pothole</option>
-                <option>Garbage</option>
-                <option>Broken Streetlight</option>
-                <option>Water Leakage</option>
-                <option>Damaged Road</option>
-                <option>Open Drain</option>
-                <option>Other</option>
-
-            </select>
-
-            <label>Description</label>
-
-            <textarea
-                id="description"
-                placeholder="Describe the problem..."
-                required
-            ></textarea>
-
-            <button class="submit-btn" type="submit">
-                🚀 Submit Report
-            </button>
-
-        </form>
 
     </div>
 
-</div>
+
+    <div class="report-layout">
+
+
+        <div class="form-panel">
+
+            <form onsubmit="submitReport(event)">
+
+                <label>Upload Image</label>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">☁</div>
+
+                    <h3>Click to upload or drag and drop</h3>
+
+                    <p>PNG, JPG up to 10MB</p>
+
+                    <input type="file" id="image" accept="image/*">
+
+                </div>
+
+
+                <label>Location</label>
+
+                <div class="location-row">
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Enter location"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="location-btn"
+                        onclick="getLocation()">
+                        📍 Use My Location
+                    </button>
+
+                </div>
+
+
+                <label>Problem Category</label>
+
+                <select id="category" required>
+
+                    <option value="">Select a category</option>
+
+                    <option>Pothole</option>
+                    <option>Garbage Overflow</option>
+                    <option>Broken Street Light</option>
+                    <option>Water Leakage</option>
+                    <option>Damaged Road</option>
+                    <option>Open Drain</option>
+                    <option>Other</option>
+
+                </select>
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the issue in detail..."
+                    maxlength="500"
+                    required></textarea>
+
+                <small class="counter">0/500</small>
+
+
+                <button class="full-btn" type="submit">
+                    ➤ &nbsp; Submit Report
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="tips-panel">
+
+            <h3>💡 Tips for better reports</h3>
+
+            <ul>
+
+                <li>Capture clear photos of the issue.</li>
+
+                <li>Include accurate location information.</li>
+
+                <li>Provide a short and clear description.</li>
+
+                <li>Avoid duplicate submissions.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</main>
+
 
 <footer>
-    <p>© 2026 CivicAI</p>
+
+    <div class="footer-logo">
+        ⬡ CivicAI
+        <small>© 2026 CivicAI. All rights reserved.</small>
+    </div>
+
+    <p>Building smarter communities with AI and citizens.</p>
+
+    <div class="footer-links">
+        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
+    </div>
+
 </footer>
 
 <script src="js/script.js"></script>
