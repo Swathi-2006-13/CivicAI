@@ -8,222 +8,366 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>CivicAI | Resolution Verification</title>
+    <title>CivicAI - Verify Resolution</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<header class="navbar">
+
+<nav class="navbar">
 
     <div class="logo">
-        <span class="logo-icon">⬡</span>
+        <span class="logo-icon">◉</span>
         Civic<span>AI</span>
     </div>
 
-    <nav>
+    <a href="index.html">
+        Home
+    </a>
 
-        <a href="index.html">Home</a>
-        <a href="report.html">Report an Issue</a>
-        <a href="dashboard.html">My Reports</a>
-        <a href="heatmap.html">Hotspots</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a class="active" href="verify.html">About</a>
+    <a href="report.html">
+        Report an Issue
+    </a>
 
-    </nav>
+    <a href="dashboard.html">
+        My Reports
+    </a>
 
-    <div class="profile">
-        🔔
-        <div class="avatar">H</div>
-        Hema R⌄
+    <a href="heatmap.html">
+        Hotspots
+    </a>
+
+    <a href="dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="verify.html" class="active">
+        Verify
+    </a>
+
+    <div class="user">
+        🔔 &nbsp; 👤 Hema R⌄
     </div>
 
-</header>
+</nav>
 
 
-<main class="page-container">
 
-    <div class="page-title">
+<main class="container">
 
-        <h1>Resolution Verification</h1>
 
-        <p>
-            Review the resolution and help ensure the issue is fixed.
-        </p>
+<div class="page-title">
+
+    <h1>
+        ✓ Verify Resolution
+    </h1>
+
+    <p>
+        Help us confirm whether the reported civic issue
+        has been resolved
+    </p>
+
+</div>
+
+
+
+<div class="grid grid-2">
+
+
+<!-- ORIGINAL REPORT -->
+
+<div class="card">
+
+    <h2>
+        Original Report
+    </h2>
+
+    <br>
+
+
+    <div class="map">
+
+        <span class="map-label label2">
+            R.S. Puram
+        </span>
+
+        <div
+            class="map-pin"
+            style="left:47%;top:42%;"
+        >
+            📍
+        </div>
 
     </div>
 
 
-    <div class="verification-panel">
+    <br>
 
 
-        <div class="issue-details">
+    <h2>
+        Huge Pothole on 5th Street
+    </h2>
 
-            <h3>Issue Details</h3>
 
-            <p>
-                <b>Issue</b>
-                <br>
-                Pothole on 5th Street
-            </p>
+    <p class="small-text"
+       style="margin-top:8px;">
+        R.S. Puram, Coimbatore
+    </p>
 
-            <p>
-                <b>Location</b>
-                <br>
-                R.S. Puram, Coimbatore
-            </p>
 
-            <p>
-                <b>Reported On</b>
-                <br>
-                Today, 10:30 AM
-            </p>
+    <br>
 
-            <p>
-                <b>Reported By</b>
-                <br>
-                Hema R
-            </p>
+
+    <span class="badge badge-high">
+        High Severity
+    </span>
+
+</div>
+
+
+
+<!-- VERIFICATION -->
+
+<div class="card verify-box">
+
+    <div class="verify-icon">
+        🛠️
+    </div>
+
+
+    <h2>
+        Issue Marked as Resolved
+    </h2>
+
+
+    <p>
+
+        The authority has submitted repair evidence.
+        AI has analyzed the evidence and marked
+        the issue as likely resolved.
+
+    </p>
+
+
+    <br>
+
+
+    <div class="card"
+         style="text-align:left;">
+
+        <div class="analysis-row">
+
+            <b>
+                Repair Evidence
+            </b>
+
+            <span class="green">
+                ✓ Verified
+            </span>
 
         </div>
 
 
-        <div class="repair-image">
+        <div class="analysis-row">
 
-            <h3>Before Repair</h3>
+            <b>
+                AI Confidence
+            </b>
 
-            <div class="road-image">
-                🕳️
-                <small>Reported Pothole</small>
+            <span class="green">
+                94%
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <h3>
+        Is the issue actually resolved?
+    </h3>
+
+
+    <div class="verify-buttons">
+
+        <button
+            class="btn"
+            onclick="verify('yes')"
+        >
+            ✓ Yes, Resolved
+        </button>
+
+
+        <button
+            class="btn btn-light"
+            onclick="verify('no')"
+        >
+            ✕ Still Exists
+        </button>
+
+    </div>
+
+
+    <p
+        id="result"
+        class="green"
+        style="
+        margin-top:20px;
+        font-weight:bold;
+        "
+    ></p>
+
+</div>
+
+</div>
+
+
+
+<br>
+
+
+
+<!-- PROCESS -->
+
+<div class="card">
+
+    <h2>
+        How Verification Works
+    </h2>
+
+    <br>
+
+
+    <div class="grid grid-3">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div>
+
+                <h3>
+                    Authority Repairs
+                </h3>
+
+                <p>
+                    Authorities repair the reported
+                    civic issue and upload evidence.
+                </p>
+
             </div>
 
         </div>
 
 
-        <div class="arrow">
-            →
-        </div>
 
+        <div class="step">
 
-        <div class="repair-image">
+            <div class="step-number">
+                2
+            </div>
 
-            <h3>After Repair (Authority)</h3>
+            <div>
 
-            <div class="road-image repaired-road">
-                🛣️
-                <small>Repair Evidence</small>
+                <h3>
+                    AI Checks Evidence
+                </h3>
+
+                <p>
+                    AI analyzes the repair evidence
+                    against the original report.
+                </p>
+
             </div>
 
         </div>
 
-    </div>
 
 
-    <div class="verification-ai">
+        <div class="step">
 
-        <div>
+            <div class="step-number">
+                3
+            </div>
 
-            <h2>🤖 AI Verification</h2>
+            <div>
 
-            <p>
-                Our AI analyzed the after-repair image and detected
-                that the reported issue appears to be fixed.
-            </p>
+                <h3>
+                    Citizen Verifies
+                </h3>
 
-        </div>
+                <p>
+                    Citizens can accept or reject
+                    the resolution.
+                </p>
 
-
-        <div class="confidence">
-
-            <small>Repair Confidence</small>
-
-            <h1>94%</h1>
-
-            <div class="progress-bar">
-                <div></div>
             </div>
 
         </div>
 
-    </div>
-
-
-    <div class="question-panel">
-
-        <h2>Did the issue get resolved?</h2>
-
-        <div class="verify-options">
-
-            <button
-                class="verify-option yes"
-                onclick="acceptResolution()">
-
-                <span>✓</span>
-
-                <div>
-                    <b>Yes, Resolved</b>
-                    <small>Issue is fixed</small>
-                </div>
-
-            </button>
-
-
-            <button
-                class="verify-option no"
-                onclick="rejectResolution()">
-
-                <span>✕</span>
-
-                <div>
-                    <b>No, Still Exists</b>
-                    <small>Issue is not fixed</small>
-                </div>
-
-            </button>
-
-
-            <button
-                class="verify-option unsure"
-                onclick="unableToVerify()">
-
-                <span>ⓘ</span>
-
-                <div>
-                    <b>Unable to Verify</b>
-                    <small>Need more details</small>
-                </div>
-
-            </button>
-
-        </div>
-
-        <div id="message"></div>
 
     </div>
+
+</div>
+
 
 </main>
 
 
-<footer>
+
+<footer class="footer">
 
     <div class="footer-logo">
-        ⬡ CivicAI
-        <small>© 2026 CivicAI. All rights reserved.</small>
+        ◉ Civic<span>AI</span>
     </div>
 
-    <p>Building smarter communities with AI and citizens.</p>
+    <p>
+        Building smarter communities with AI and citizens.
+    </p>
 
-    <div class="footer-links">
-        Privacy Policy &nbsp;&nbsp; Terms of Service &nbsp;&nbsp; Contact Us
-    </div>
+    <p>
+        © 2025 CivicAI. All rights reserved.
+    </p>
 
 </footer>
 
 
-<script src="js/script.js"></script>
+
+<script>
+
+function verify(status) {
+
+    const result =
+        document.getElementById("result");
+
+    if (status === "yes") {
+
+        result.innerHTML =
+            "✓ Thank you! You verified that the issue has been resolved.";
+
+    } else {
+
+        result.innerHTML =
+            "⚠ Thank you! The issue has been marked as not resolved.";
+
+        result.className = "red";
+
+    }
+
+}
+
+</script>
+
 
 </body>
 </html>
